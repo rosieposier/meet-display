@@ -1,0 +1,88 @@
+{
+  "IPF": {
+    "name": "International Powerlifting Federation",
+    "equipmentLevels": ["RAW", "EQUIPPED"],
+    "drugTested": true,
+    "weightClasses": {
+      "FEMALE": {
+        "w-0": "47",
+        "w-1": "52",
+        "w-2": "57",
+        "w-3": "63",
+        "w-4": "69",
+        "w-5": "76",
+        "w-6": "84",
+        "w-7": "84+"
+      },
+      "MALE": {
+        "w-0": "59",
+        "w-1": "66",
+        "w-2": "74",
+        "w-3": "83",
+        "w-4": "93",
+        "w-5": "105",
+        "w-6": "120",
+        "w-7": "120+"
+      }
+    },
+    "divisions": {
+      "SO": "Special Olympics",
+      "O": "Open",
+      "SJ": "Sub-Junior",
+      "J": "Junior",
+      "M1": "Masters 1",
+      "M2": "Masters 2",
+      "M3": "Masters 3",
+      "M4": "Masters 4"
+    }
+  },
+  "USAPL": {
+    "name": "USA Powerlifting",
+    "drugTested": true,
+    "weightClasses": {
+      "FEMALE": {},
+      "MALE": {}
+    },
+    "divisions": {}
+  },
+  "IPL": {
+    "name": "International Powerlifting League",
+    "equipmentLevels": ["RAW", "EQUIPPED"],
+    "drugTested": false,
+    "weightClasses": {
+      "FEMALE": {},
+      "MALE": {}
+    },
+    "divisions": {}
+  },
+  "WPO": {
+    "name": "World Powerlifting Organisation",
+    "equipmentLevels": ["RAW", "EQUIPPED"],
+    "drugTested": false,
+    "weightClasses": {
+      "FEMALE": {},
+      "MALE": {}
+    },
+    "divisions": {}
+  },
+  "WRPF": {
+    "name": "World Raw Powerlifting Federation",
+    "equipmentLevels": ["RAW", "EQUIPPED"],
+    "drugTested": false,
+    "weightClasses": {
+      "FEMALE": {},
+      "MALE": {}
+    },
+    "divisions": {}
+  },
+  "GPC": {
+    "name": "Global Powerlifting Committee",
+    "equipmentLevels": ["RAW", "EQUIPPED"],
+    "drugTested": false,
+    "weightClasses": {
+      "FEMALE": {},
+      "MALE": {}
+    },
+    "divisions": {}
+  }
+}

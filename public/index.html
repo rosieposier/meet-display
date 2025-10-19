@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Meet Display</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- Configuration Panel -->
+        <div id="config-panel" class="config-panel">
+            <div class="config-content">
+                <h2>Meet Configuration</h2>
+                <div class="config-form">
+                    <div class="form-group">
+                        <label for="meet-id">Meet ID:</label>
+                        <input type="text" id="meet-id" placeholder="e.g., m1a2j7aepd02">
+                    </div>
+                    <div class="form-group">
+                        <label for="federation">Federation:</label>
+                        <select id="federation">
+                            <option value="IPF">International Powerlifting Federation (IPF)</option>
+                            <option value="IPL">International Powerlifting League (IPL)</option>
+                            <option value="WPO">World Powerlifting Organisation (WPO)</option>
+                            <option value="WRPF">World Raw Powerlifting Federation (WRPF)</option>
+                            <option value="GPC">Global Powerlifting Committee (GPC)</option>
+                        </select>
+                    </div>
+                    <button id="connect-btn" class="btn-primary">Connect</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Display -->
+        <div id="main-display" class="hidden">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-content">
+                    <h1 id="meet-title">Live Meet Results</h1>
+                    <div class="header-info">
+                        <span id="federation-name">Federation: None</span>
+                        <span id="last-update">Last updated: Never</span>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <button id="fullscreen-btn" class="btn-secondary">Fullscreen</button>
+                    <button id="disconnect-btn" class="btn-danger">Disconnect</button>
+                </div>
+            </header>
+
+            <!-- Filter Controls -->
+            <div class="controls">
+                <div class="display-group">
+                    <label for="display-mode"><strong>Display Mode:</strong></label>
+                    <select id="display-mode">
+                        <option value="table">Results Table</option>
+                        <option value="compact">Compact Cards</option>
+                        <option value="timer">Live Timer + Lights</option>
+                        <option value="plates">Plate Loading Display</option>
+                        <option value="overlay">Livestream Overlay</option>
+                    </select>
+                </div>
+
+                <div class="search-group">
+                    <input type="text" id="search-lifter" placeholder="Search lifter name...">
+                </div>
+            </div>
+
+            <!-- Results Table -->
+            <div id="results-container" class="results-container">
+                <table id="results-table" class="results-table">
+                    <thead>
+                        <tr>
+                            <th class="draggable" data-column="place">Place</th>
+                            <th class="draggable" data-column="name">Name</th>
+                            <th class="draggable" data-column="sex">Sex</th>
+                            <th class="draggable" data-column="division">Division</th>
+                            <th class="draggable" data-column="weightclass">Weight Class</th>
+                            <th class="draggable" data-column="bodyweight">Bodyweight</th>
+                            <th colspan="4" class="lift-header">Squat</th>
+                            <th colspan="4" class="lift-header">Bench</th>
+                            <th colspan="4" class="lift-header">Deadlift</th>
+                            <th class="draggable" data-column="total">Total</th>
+                        </tr>
+                        <tr class="sub-header">
+                            <th colspan="6"></th>
+                            <th class="draggable" data-column="squat1">1</th>
+                            <th class="draggable" data-column="squat2">2</th>
+                            <th class="draggable" data-column="squat3">3</th>
+                            <th class="draggable" data-column="squatBest">Best</th>
+                            <th class="draggable" data-column="bench1">1</th>
+                            <th class="draggable" data-column="bench2">2</th>
+                            <th class="draggable" data-column="bench3">3</th>
+                            <th class="draggable" data-column="benchBest">Best</th>
+                            <th class="draggable" data-column="deadlift1">1</th>
+                            <th class="draggable" data-column="deadlift2">2</th>
+                            <th class="draggable" data-column="deadlift3">3</th>
+                            <th class="draggable" data-column="deadliftBest">Best</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="results-body">
+                        <!-- Results will be populated here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Compact View (Alternative Layout) -->
+            <div id="compact-container" class="compact-container hidden">
+                <div id="compact-grid" class="compact-grid">
+                    <!-- Compact cards will be populated here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Connection Status -->
+        <div id="status-indicator" class="status-indicator disconnected">
+            <span class="status-dot"></span>
+            <span id="status-text">Disconnected</span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

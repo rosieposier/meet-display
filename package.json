@@ -1,0 +1,27 @@
+{
+  "name": "meet-display",
+  "version": "1.0.0",
+  "description": "Live meet display for powerlifting competitions",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "powerlifting",
+    "meet-display"
+  ],
+  "author": "Rosie Wilson",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "node-fetch": "^2.6.7",
+    "uWebSockets.js": "github:uNetworking/uWebSockets.js#v20.52.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "type": "module"
+}
